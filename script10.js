@@ -147,8 +147,9 @@ document.getElementById('checkBtn').onclick = function() {
 };
 
 // Если нужна кнопка "Далее"
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('next').onclick = function() {
-        window.location.href = '../StartPage/indexStartPage.html';
-    };
-});
+// document.addEventListener("DOMContentLoaded", function() {
+document.getElementById('next').onclick = function() {
+    window.location.href = 'index.html';
+};
+
+// });
