@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('first').onclick = function() {
-        window.location.href = '../SpeedReadingMaterials/index.html';
+        window.location.href = '../SpeedReadingMaterials/indexRead.html';
     };
 
 });
+
