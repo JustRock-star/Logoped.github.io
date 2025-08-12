@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('second').onclick = function() {
-        window.location.href = '../ArrangeCorrectly/index.html';
+        window.location.href = 'indexAr.html';
     };
 });
 
@@ -10,5 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
 });
+
 
 
