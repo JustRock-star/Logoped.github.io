@@ -1,0 +1,174 @@
+body{
+    background-color: rgb(249, 255, 171);
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; 
+  }
+  .container {
+    padding: 10px;
+  }
+  .header {
+    font-size: 18px;
+  }
+  .item {
+    width: 100%; 
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 16px; 
+  }
+  .container {
+    padding: 15px;
+  }
+  .header {
+    font-size: 22px;
+  }
+  .item {
+    width: 48%;
+    margin-bottom: 15px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  .container {
+    padding: 20px;
+  }
+  .header {
+    font-size: 26px;
+  }
+  .item {
+    width: 30%; 
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 20px; 
+  }
+  .container {
+    padding: 30px;
+  }
+  .header {
+    font-size: 32px;
+  }
+  .item {
+    width: 22%; 
+    margin-bottom: 30px;
+  }
+}
+
+.divaragutyun {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.d1, .d2, .d3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.l1, .l2, .l3 {
+    font-size: 28px;
+    color: #b00;
+    margin-right: 5px;
+}
+
+.inputaragutyun {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    accent-color: #b00;
+}
+
+.vank-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    max-width: 600px;
+    height: 120px;           /* высота одного блока */
+    overflow: hidden;
+    margin: 40px auto 0 auto;
+    background: #fffbe6;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #0001;
+}
+
+.vankdiv1 {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    font-size: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 120px;      /* совпадает с высотой контейнера */
+    transition: transform 0.7s;
+    color: rgb(255, 0, 0);
+    font-family: Arial, sans-serif;
+    user-select: none;
+}
+
+.hetgnal {
+    position: absolute;
+    top: 82%;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 36px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px #0003;
+    cursor: pointer;
+    transition: 
+        background 0.3s, 
+        transform 0.2s, 
+        box-shadow 0.2s,
+        letter-spacing 0.2s;
+    letter-spacing: 3px;
+    min-width: 140px;
+    text-align: center;
+    margin-top: 40px;
+    outline: none;
+    z-index: 10;
+    gap: 8px;
+}
+
+.hetgnal a {
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.hetgnal:hover, .hetgnal:focus {
+    background: linear-gradient(90deg, #f09819 0%, #ff5858 100%);
+    transform: translateY(-5px) scale(1.06);
+    box-shadow: 0 12px 32px #0004;
+    letter-spacing: 5px;
+    filter: brightness(1.08);
+}

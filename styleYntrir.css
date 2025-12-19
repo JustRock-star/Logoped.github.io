@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.5s ease;
+}
+
+body.success-bg {
+  background: linear-gradient(180deg, #90EE90 0%, #98FF98 100%);
+}
+
+body.failed-bg {
+  background: linear-gradient(180deg, #FFB6C6 0%, #FFC0CB 100%);
+}
+
+.header {
+  text-align: center;
+  padding: 30px 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.level-info {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  font-weight: 600;
+  color: #fff;
+}
+
+.game-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.question-card {
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid rgba(102, 126, 234, 0.1);
+}
+
+.question-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  margin-bottom: 20px;
+  font-size: 5rem;
+}
+
+.emoji {
+  display: block;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  padding: 14px 18px;
+  font-size: 1.1rem;
+  border: 3px solid #667eea;
+  background: white;
+  color: #333;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.option-btn:hover {
+  background: #f0f0f0;
+  border-color: #764ba2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.option-btn.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.option-btn.correct {
+  background: #38ef7d;
+  color: white;
+  border-color: #38ef7d;
+  animation: correctPulse 0.6s ease;
+}
+
+.option-btn.incorrect {
+  background: #f45c43;
+  color: white;
+  border-color: #f45c43;
+  animation: incorrectShake 0.6s ease;
+}
+
+@keyframes correctPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes incorrectShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-btn {
+  flex: 1;
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.back-btn {
+  background: #FF6B6B;
+  border: none;
+}
+
+.back-btn:hover {
+  background: #FF5252;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.next-btn {
+  background: #4ECDC4;
+  border: none;
+}
+
+.next-btn:hover {
+  background: #45B5AD;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .questions-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .image-container {
+    font-size: 4rem;
+    min-height: 120px;
+  }
+
+  .footer-buttons {
+    flex-direction: column;
+  }
+
+  .nav-btn {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 20px 15px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .question-card {
+    padding: 18px;
+  }
+
+  .image-container {
+    font-size: 3rem;
+    min-height: 100px;
+  }
+
+  .option-btn {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+}

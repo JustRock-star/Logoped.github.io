@@ -1,0 +1,295 @@
+body{
+    background-color: rgb(154, 255, 255);
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; 
+  }
+  .container {
+    padding: 10px;
+  }
+  .header {
+    font-size: 18px;
+  }
+  .item {
+    width: 100%; 
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 16px; 
+  }
+  .container {
+    padding: 15px;
+  }
+  .header {
+    font-size: 22px;
+  }
+  .item {
+    width: 48%;
+    margin-bottom: 15px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  .container {
+    padding: 20px;
+  }
+  .header {
+    font-size: 26px;
+  }
+  .item {
+    width: 30%; 
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 20px; 
+  }
+  .container {
+    padding: 30px;
+  }
+  .header {
+    font-size: 32px;
+  }
+  .item {
+    width: 22%; 
+    margin-bottom: 30px;
+  }
+}
+
+.text{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(255, 0, 0);
+}
+.vank{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    color: white;
+}
+
+.vank{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 16px 40px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px #0002;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 2px;
+    min-width: 200px; /* добавьте эту строку */
+    height: 60px;
+    text-align: center; /* выравнивание текста по центру */
+    margin-top: 40px; 
+}
+
+.bar{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 16px 40px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px #0002;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 2px;
+    min-width: 200px; /* добавьте эту строку */
+    height: 60px;
+    text-align: center; /* выравнивание текста по центру */
+    margin-top: 40px; 
+}
+
+.barakapakcutyun{
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 16px 40px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px #0002;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 2px;
+    min-width: 200px; /* добавьте эту строку */
+    height: 60px;
+    text-align: center; /* выравнивание текста по центру */
+    margin-top: 40px; 
+}
+
+
+
+/* .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: transparent;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.stars::before, .stars::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    animation: twinkle 2s infinite ease-in-out;
+    opacity: 0.6;
+} */
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* ===== ТРАВА И ЦВЕТЫ ===== */
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to top, #78c850 50%, transparent 100%);
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    gap: 15px;
+   
+    
+}
+
+.grass::before,
+.grass::after {
+    content: '🌸🌿🌼🌷';
+    font-size: 80px;
+    animation: sway 3s ease-in-out infinite alternate;
+}
+
+@keyframes sway {
+    from { transform: translateX(0px) rotate(-2deg); }
+    to { transform: translateX(3px) rotate(2deg); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+/* ===== ССЫЛКИ В КНОПКАХ ===== */
+button a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.sun {
+    position: absolute;
+    top: -10%;
+    left: 88%;
+    transform: translateX(-50%);
+    font-size: 200px;
+    color: #ffcc00;
+    z-index: 1;
+    /* animation: rotate 10s linear infinite;
+    animation: sway 3s ease-in-out infinite alternate; */
+    animation: sway 3s ease-in-out infinite alternate, rotate 20s linear infinite;
+}
+
+.amp1 {
+    position: absolute;
+    top: -7%;
+    left: 15%;
+    font-size: 150px;
+    color: #ffffff;
+    z-index: 1;
+    animation: sway 3s ease-in-out infinite alternate, sway 3s linear infinite;
+}
+.amp2 {
+    position: absolute;
+    top: -7%;
+    left: 1%;
+    font-size: 150px;
+    color: #ffffff;
+    z-index: 1;
+    animation: sway 3s ease-in-out infinite alternate, sway 3s linear infinite;
+}
+
+.amp3 {
+    position: absolute;
+    top: -7%;
+    left: 73%;
+    font-size: 150px;
+    color: #ffffff;
+    z-index: 1;
+    animation: sway 3s ease-in-out infinite alternate, sway 3s linear infinite;
+}
+
+.home-btn {
+    display: inline-block;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 100;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #FF6B6B;
+    border: none;
+    border-radius: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.home-btn:hover {
+    background: #FF5252;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
+}

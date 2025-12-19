@@ -1,0 +1,234 @@
+:root {
+  --bg: #87CEEB; /* мягкий голубой небо */
+  --window-bg: #FFD700; /* солнечный жёлтый */
+  --text: #fff;
+  --btn-1-bg: #FF6B6B; /* мягкий коралловый */
+  --btn-2-bg: #4ECDC4; /* бирюзовый */
+  --btn-3-bg: #95E1D3; /* мятный */
+  --btn-text: #fff;
+  --btn-hover: rgba(0,0,0,0.1);
+  --radius: 16px;
+  --font: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 100%);
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 2.5rem;
+  background: var(--window-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  max-width: 500px;
+  width: 95%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 700;
+  color: var(--btn-text);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  flex: 0 1 auto;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn.primary {
+  background: var(--btn-1-bg);
+}
+
+.btn.secondary {
+  background: var(--btn-2-bg);
+}
+
+/* Light yellow variant for specific button */
+.btn.light-yellow {
+  background: #FFF9A6;
+  color: #1a1a1a;
+}
+
+.btn.light-yellow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.btn.tertiary {
+  background: var(--btn-3-bg);
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive buttons */
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* ===== ТРАВА И ЦВЕТЫ ===== */
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to top, #78c850 50%, transparent 100%);
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    gap: 15px;
+   
+    
+}
+
+.grass::before,
+.grass::after {
+    content: '🌸🌿🌼🌷';
+    font-size: 80px;
+    animation: sway 3s ease-in-out infinite alternate;
+}
+
+@keyframes sway {
+    from { transform: translateX(0px) rotate(-2deg); }
+    to { transform: translateX(3px) rotate(2deg); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+/* ===== ССЫЛКИ В КНОПКАХ ===== */
+button a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.sun {
+    position: absolute;
+    top: -10%;
+    left: 88%;
+    transform: translateX(-50%);
+    font-size: 200px;
+    color: #ffcc00;
+    z-index: 1;
+    /* animation: rotate 10s linear infinite;
+    animation: sway 3s ease-in-out infinite alternate; */
+    animation: sway 3s ease-in-out infinite alternate, rotate 20s linear infinite;
+}
+
+.amp1 {
+    position: absolute;
+    top: -7%;
+    left: 15%;
+    font-size: 150px;
+    color: #ffffff;
+    z-index: 1;
+    animation: sway 3s ease-in-out infinite alternate, sway 3s linear infinite;
+}
+.amp2 {
+    position: absolute;
+    top: -7%;
+    left: 1%;
+    font-size: 150px;
+    color: #ffffff;
+    z-index: 1;
+    animation: sway 3s ease-in-out infinite alternate, sway 3s linear infinite;
+}
+
+.amp3 {
+    position: absolute;
+    top: -7%;
+    left: 73%;
+    font-size: 150px;
+    color: #ffffff;
+    z-index: 1;
+    animation: sway 3s ease-in-out infinite alternate, sway 3s linear infinite;
+}
+
+/* ===== CREATOR CREDIT ===== */
+.creator-credit {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: 700;
+    z-index: 100;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.creator-credit:hover {
+    opacity: 1;
+}

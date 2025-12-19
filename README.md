@@ -1,2 +1,2 @@
 # Logoped.github.io
-Games For Kids
+Games for children

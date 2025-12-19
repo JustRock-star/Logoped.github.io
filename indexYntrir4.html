@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ընտրիր Համապատասխան Բառը - Մակարդակ 4</title>
+  <link rel="stylesheet" href="styleYntrir.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <h1>Ընտրիր Համապատասխան Բառը</h1>
+    <p class="level-info">Մակարդակ 4</p>
+  </div>
+
+  <main class="game-container">
+    <div class="questions-grid">
+      <!-- Հարց 1 -->
+      <div class="question-card">
+        <div class="image-container">
+          <span class="emoji">⚽</span>
+        </div>
+        <div class="options">
+          <button class="option-btn" data-correct="false">Ցանց</button>
+          <button class="option-btn" data-correct="true">Գնդակ</button>
+          <button class="option-btn" data-correct="false">Խաղալիք</button>
+          <button class="option-btn" data-correct="false">Տախտակ</button>
+          <button class="option-btn" data-correct="false">Քար</button>
+        </div>
+      </div>
+
+      <!-- Հարց 2 -->
+      <div class="question-card">
+        <div class="image-container">
+          <span class="emoji">🎨</span>
+        </div>
+        <div class="options">
+          <button class="option-btn" data-correct="false">Ամպ</button>
+          <button class="option-btn" data-correct="true">Ներկապնակ</button>
+          <button class="option-btn" data-correct="false">Կրակ</button>
+          <button class="option-btn" data-correct="false">Թուղթ</button>
+          <button class="option-btn" data-correct="false">Մատանի</button>
+        </div>
+      </div>
+
+      <!-- Հարց 3 -->
+      <div class="question-card">
+        <div class="image-container">
+          <span class="emoji">🌳</span>
+        </div>
+        <div class="options">
+          <button class="option-btn" data-correct="false">Տուն</button>
+          <button class="option-btn" data-correct="false">Մատիտ</button>
+          <button class="option-btn" data-correct="true">Ծառ</button>
+          <button class="option-btn" data-correct="false">Ցանց</button>
+          <button class="option-btn" data-correct="false">Ժամացույց</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer-buttons">
+    <a href="index.html" class="nav-btn back-btn">← Գլխավոր Էջ</a>
+    <a href="indexYntrir5.html" class="nav-btn next-btn">Հաջորդ Մակարդակ →</a>
+  </div>
+
+  <!-- Աղմուկի ֆայլեր -->
+  <audio id="successSound">
+    <source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="failedSound">
+    <source src="https://assets.mixkit.co/active_storage/sfx/2868/2868-preview.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="scriptYntrir.js"></script>
+</body>
+</html>
