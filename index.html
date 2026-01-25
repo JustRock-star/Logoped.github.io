@@ -68,10 +68,31 @@
 
   const app = initializeApp(firebaseConfig);
 </script>
+  <button id="loginGoogle">Войти через Google</button>
+
+<script type="module">
+  import { getAuth, signInWithPopup, GoogleAuthProvider } 
+  from "https://www.gstatic.com/firebasejs/12.8.0/firebase-auth.js";
+
+  const auth = getAuth();
+  const provider = new GoogleAuthProvider();
+
+  document.getElementById("loginGoogle").onclick = () => {
+    signInWithPopup(auth, provider)
+      .then(result => {
+        alert("Вы вошли как: " + result.user.email);
+      })
+      .catch(err => {
+        alert(err.message);
+      });
+  };
+</script>
+
 
   <script src="scriptStartPage.js"></script>
 </body>
 </html>
+
 
 
 
