@@ -31,29 +31,28 @@
     <div class="amp3">☁️</div>
 
     <div class="creator-credit">Created by Arman Grigoryan</div>
-<!--     <ul class="Logos">
-      <li><img class="Youtube_logo" src="Youtube_logo.png"></li>
-      <li><img class="Tiktok_logo" src="tiktok logo.png"></li>
-      <li><img class="Instagram_logo" src="Instagram_logo.png"></li>
-    </ul>
-  <style>
-  .bottom-right {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    display: flex;      /* чтобы картинки шли в ряд */
-    gap: 10px;          /* расстояние между картинками */
-    list-style: none;   /* убрать маркеры */
-    margin: 0;
-    padding: 10px;
-}
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-  .bottom-right img {
-    width: 50px;        /* можно задать размер */
-    height: auto;
-    cursor: pointer;    /* курсор при наведении */
-}
-</style> -->
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC6MCwKoSNIfesqbKeG1yVGTw2LeyTJcCg",
+  authDomain: "web-games-server.firebaseapp.com",
+  projectId: "web-games-server",
+  storageBucket: "web-games-server.firebasestorage.app",
+  messagingSenderId: "9281210355",
+  appId: "1:9281210355:web:8f90f8ddc60d36d8a3b486",
+  measurementId: "G-YY2GVTD5Y5"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
   <script src="scriptStartPage.js"></script>
 </body>
 </html>
+
