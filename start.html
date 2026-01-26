@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Логопед — старт</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Логопед</h1>
+      <div class="auth-controls">
+        <button id="googleSignIn" class="btn google">Вход через Google</button>
+        <button id="googleSignOut" class="btn ghost" style="display:none;">Выйти</button>
+      </div>
+    </header>
+
+    <section class="start-panel">
+      <div id="userInfo" class="user-info"></div>
+
+      <div class="choices">
+        <button id="first" class="btn primary">Читать</button>
+        <button id="second" class="btn primary">Ар/Кор</button>
+      </div>
+
+      <footer class="note">
+        <small>Войдите через Google, чтобы сохранять прогресс и настройки.</small>
+      </footer>
+    </section>
+  </main>
+
+  <script type="module" src="scriptStartPage.js"></script>
+</body>
+</html>
