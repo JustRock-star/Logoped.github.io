@@ -8,16 +8,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="aboutPopup.css" />
 </head>
 <body>
   <main class="container">
     <h1>ԲԱՐԻ ԳԱԼՈՒՍՏ</h1>
     <p>Խաղեր Երեխաների Համար</p>
     <div class="buttons">
-      <a href="indexRead.html" id="first" class="btn secondary light-yellow">Կարդում Ենք Միասին</a>
-      <a href="indexArCor.html" id="second" class="btn secondary light-yellow">Ճիշտ Դասավորիր 1</a>
-      <a href="indexYntrir1.html" id="three" class="btn secondary light-yellow">Բառախաղ</a>
-      <a href="indexYntrirVank1.html" id="four" class="btn secondary light-yellow">Ճիշտ Դասավորիր 2</a>
+      <a href="#" id="first" class="btn secondary light-yellow">Կարդում Ենք Միասին</a>
+      <a href="#" id="second" class="btn secondary light-yellow">Ճիշտ Դասավորիր 1</a>
+      <a href="indexYntrir1.html" class="btn secondary light-yellow">Բառախաղ</a>
+      <a href="indexYntrirVank1.html" class="btn secondary light-yellow">Ճիշտ Դասավորիր 2</a>
     </div>
   </main>
     <div class="grass"></div>
@@ -31,11 +32,80 @@
     <div class="amp3">☁️</div>
 
     <div class="creator-credit">Created by Arman Grigoryan</div>
+<!--     <ul class="Logos">
+      <li><img class="Youtube_logo" src="Youtube_logo.png"></li>
+      <li><img class="Tiktok_logo" src="tiktok logo.png"></li>
+      <li><img class="Instagram_logo" src="Instagram_logo.png"></li>
+    </ul>
+  <style>
+  .bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;      /* чтобы картинки шли в ряд */
+    gap: 10px;          /* расстояние между картинками */
+    list-style: none;   /* убрать маркеры */
+    margin: 0;
+    padding: 10px;
+}
+
+  .bottom-right img {
+    width: 50px;        /* можно задать размер */
+    height: auto;
+    cursor: pointer;    /* курсор при наведении */
+}
+</style> -->
   <script src="scriptStartPage.js"></script>
+  <script src="aboutPopup.js"></script>
 </body>
 </html>
 
+  <!-- About / Contact popup -->
+  <div id="about-toggle" class="about-toggle" aria-hidden="false">About Us</div>
 
+  <div id="about-popup" class="about-popup" aria-hidden="true">
+    <div class="about-content">
+      <button id="about-close" class="about-close" aria-label="Close">✕</button>
+      <div class="about-panels">
+        <!-- Left square: profile + LinkedIn -->
+        <div class="panel panel-left">
+          <div class="photo-wrap">
+            <img src="./68b5e88b5b66f74444711b1b_Lia-Hovhannisyan.jpg" alt="Lia Hovhannisyan" class="profile-img" />
+          </div>
+          <a class="linkedin" href="https://www.linkedin.com/in/lia-hovhannisyan-8a69292b4/?originalSubdomain=am" target="_blank" rel="noopener">LinkedIn</a>
+          <div class="panel">Speech Therapy Programs Manager</div>
+        </div>
+
+        <!-- Middle rectangle: business card with interactive links -->
+        <div class="panel panel-middle">
+          <!-- <div class="card-text-wrap"> -->
+          <h2 alt="Business card" class="card-text"> Լիա Հովհաննիսյան </h2>
+          <!-- </div> -->
+          <div class="card-links">
+            <a id="card-email" href="#">lia.hovhannissyan@coaf.org</a>
+            <a id="card-phone" href="tel:+37455770052">+374 55 770052</a>
+            <a id="card-address" href="#">Մելիք-Ադամյան փ․, 2/2, Երևան</a>
+            <a id="card-qr" href="https://coaf.org" target="_blank" rel="noopener">
+              <img src="./My_QR_Code_2-1024.png" alt="COAF QR" class="qr-img" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Right square: COAF logo + link -->
+        <div class="panel panel-right">
+          <div class="logo-wrap">
+            <img src="./images.png" alt="COAF" class="coaf-logo" />
+          </div>
+          <a class="coaf-link" href="http://hmk.am/l-hovhannisyan-eduarmenia2023/" target="_blank" rel="noopener">More</a>
+          <a class="facebook-link" href="https://www.facebook.com/lia.hovhannisyan.86" target="_blank" rel="noopener" title="Facebook" style="margin-top:10px;display:inline-block;">
+            <img src="media.svg" alt="Facebook" class="fb-icon" style="width:32px;height:32px;" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
 
 
 
