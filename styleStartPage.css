@@ -232,3 +232,37 @@ button a {
 .creator-credit:hover {
     opacity: 1;
 }
+
+.card-text {
+    font-size: 1.5rem;
+    color: #f7c146;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 0 6px;
+    line-height: 1.2;
+}
+
+/* .card-text-wrap {
+    background: linear-gradient(120deg, #fff 70%, #f7c14622 100%);
+    border-radius: 10px;
+    padding: 8px;
+    border: 1.5px solid #f7c14633;
+    margin-bottom: 10px;
+} */
+
+#card-adress {
+    font-size: 1rem;
+    color: #000000;
+    font-weight: 500;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.panel {
+    font-size: 1rem;
+    color: #000000;
+    font-weight: 500;
+    margin-top: 8px;
+    text-align: center;
+}
