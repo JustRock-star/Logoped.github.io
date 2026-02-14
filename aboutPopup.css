@@ -1,0 +1,185 @@
+/* COAF-style variables */
+:root{
+  --coaf-yellow: #f7c146;
+  --coaf-dark: #333;
+  --panel-bg: #fff;
+  --panel-radius: 8px;
+}
+
+/* Toggle button bottom-left */
+.about-toggle{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  background:var(--coaf-yellow);
+  color:#111;
+  padding:10px 14px;
+  border-radius:26px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.15);
+  cursor:pointer;
+  font-weight:600;
+  z-index:1200;
+}
+
+/* Popup container */
+.about-popup{
+  position:fixed;
+  left:18px;
+  bottom:70px;
+  width:520px;
+  max-width:calc(100% - 36px);
+  background:transparent;
+  z-index:1200;
+  display:none;
+}
+.about-popup[aria-hidden="false"]{display:block}
+
+.about-content{
+  background: linear-gradient(135deg, #fff 80%, #f7c14622 100%);
+  border-radius:20px;
+  box-shadow:0 10px 32px 0 rgba(247,193,70,0.18), 0 2px 8px rgba(0,0,0,0.08);
+  padding:28px 24px 24px 24px;
+  border-left:8px solid var(--coaf-yellow);
+  min-width:320px;
+}
+
+.about-close{
+  position:absolute;
+  right:26px;
+  bottom:unset;
+  top:8px;
+  background:transparent;
+  border:none;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.about-panels{
+  display:flex;
+  gap:20px;
+  align-items:stretch;
+  justify-content:center;
+}
+
+.panel{
+  background:rgba(255,255,255,0.92);
+  flex:1 1 0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:16px 10px 12px 10px;
+  border-radius:14px;
+  box-shadow:0 2px 8px rgba(247,193,70,0.07);
+  min-height:140px;
+}
+
+.panel-left, .panel-right{
+  width:130px;
+  min-width:110px;
+}
+
+.panel-middle{
+  flex:1 1 260px;
+  min-width:220px;
+}
+
+.photo-wrap, .logo-wrap{
+  background:linear-gradient(120deg, #fff 70%, #f7c14633 100%);
+  border-radius:12px;
+  overflow:hidden;
+  width:100%;
+  height:100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1.5px solid #f7c14644;
+  margin-bottom:10px;
+}
+.name-wrap {
+  min-height:100px;
+  justify-content:center;
+}
+.lia-name {
+  font-family: 'Caveat', 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f7c146;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 0 6px;
+  line-height: 1.2;
+}
+
+.profile-img, .coaf-logo{
+  max-width:100%;
+  max-height:100%;
+  display:block;
+}
+
+.card-img-wrap{
+  width:100%;
+  background:linear-gradient(120deg, #fff 70%, #f7c14622 100%);
+  border-radius:10px;
+  padding:8px;
+  border:1.5px solid #f7c14633;
+  margin-bottom:10px;
+}
+
+.card-img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.card-links{
+  margin-top:8px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  font-size:14px;
+}
+
+
+.card-links a, .linkedin, .coaf-link{
+  color:var(--coaf-dark);
+  text-decoration:none;
+  background:#fff;
+  padding:6px 8px;
+  border-radius:6px;
+  border:1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-links a#card-qr {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.qr-img {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s;
+}
+.qr-img:hover {
+  box-shadow: 0 4px 16px rgba(247,193,70,0.25);
+}
+
+.card-links a:hover:not(#card-qr), .linkedin:hover, .coaf-link:hover{
+  background:#fff9f0;
+  border-color:#f0d59b;
+}
+
+@media (max-width:640px){
+  .about-popup{left:12px; right:12px; width:auto; bottom:70px}
+  .about-panels{flex-direction:column}
+  .panel-left, .panel-right{width:100%}
+}
