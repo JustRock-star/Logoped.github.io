@@ -79,10 +79,6 @@ body {
     border-radius: 14px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
-    background: linear-gradient(45deg, #fffbe6, #e3f2fd);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
 
 .bottomItems {
     display: flex;
@@ -97,7 +93,7 @@ body {
 .item2Bottom,
 .item3Bottom {
     position: static;
-    font-size: 46px;
+    font-size: 60px;
     color: rgb(61, 61, 255);
     margin: 16px 0;
     min-width: 120px;
