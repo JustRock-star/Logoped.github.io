@@ -3,10 +3,16 @@ function makeDraggable(selector) {
     let offsetX = 0, offsetY = 0, isDragging = false;
 
     el.style.cursor = 'grab';
+    el.style.userSelect = 'none';
+    el.style.webkitUserSelect = 'none';
+    el.style.MozUserSelect = 'none';
+    el.style.msUserSelect = 'none';
 
     // Мышь
     el.addEventListener('mousedown', function(e) {
         isDragging = true;
+        document.body.style.userSelect = 'none';
+        document.body.style.webkitUserSelect = 'none';
         const rect = el.getBoundingClientRect();
         el.style.position = 'absolute';
         el.style.left = rect.left + window.scrollX + 'px';
@@ -28,6 +34,8 @@ function makeDraggable(selector) {
         if (!isDragging) return;
         isDragging = false;
         el.style.cursor = 'grab';
+        document.body.style.userSelect = 'auto';
+        document.body.style.webkitUserSelect = 'auto';
     });
 
     // Сенсорные экраны
@@ -58,6 +66,8 @@ function makeDraggable(selector) {
         if (!isDragging) return;
         isDragging = false;
         el.style.cursor = 'grab';
+        document.body.style.userSelect = 'auto';
+        document.body.style.webkitUserSelect = 'auto';
     });
 }
 
@@ -71,34 +81,31 @@ const texts = [
     document.querySelector('.item2Bottom'),
     document.querySelector('.item3Bottom')
 ];
-const images = [
-    document.querySelector('.item1Top'),
-    document.querySelector('.item2Top'),
-    document.querySelector('.item3Top')
-];
+const dropZones = document.querySelectorAll('.dropZone');
 
 
 
 // Проверка при отпускании мыши — прилипание к любой картинке
 document.addEventListener('mouseup', function() {
-    texts.forEach(textEl => {
-        const txtRect = textEl.getBoundingClientRect();
-        const txtCenter = { x: txtRect.left + txtRect.width/2, y: txtRect.top + txtRect.height/2 };
-        images.forEach(imageEl => {
-            const imgRect = imageEl.getBoundingClientRect();
-            const imgCenter = { x: imgRect.left + imgRect.width/2, y: imgRect.top + imgRect.height/2 };
+    dropZones.forEach(dropZone => {
+        const dropRect = dropZone.getBoundingClientRect();
+        const dropCenter = { x: dropRect.left + dropRect.width/2, y: dropRect.top + dropRect.height/2 };
+        texts.forEach(textEl => {
+            const txtRect = textEl.getBoundingClientRect();
+            const txtCenter = { x: txtRect.left + txtRect.width/2, y: txtRect.top + txtRect.height/2 };
             const dist = Math.sqrt(
-                Math.pow(txtCenter.x - imgCenter.x, 2) +
-                Math.pow(txtCenter.y - imgCenter.y, 2)
+                Math.pow(txtCenter.x - dropCenter.x, 2) +
+                Math.pow(txtCenter.y - dropCenter.y, 2)
             );
             if (dist < 90) { // 90px — радиус прилипания
-                // Ставим текст ровно под картинку (по центру)
-                textEl.style.left = (imgRect.left + imgRect.width/2 - txtRect.width/2) + 'px';
-                textEl.style.top = (imgRect.bottom + 10) + 'px';
+                const centerX = dropRect.left + (dropRect.width - txtRect.width) / 2;
+                const centerY = dropRect.top + (dropRect.height - txtRect.height) / 2;
+                textEl.style.left = centerX + 'px';
+                textEl.style.top = centerY + 'px';
                 textEl.style.position = 'absolute';
                 textEl.style.zIndex = 1001;
                 // Запоминаем к какой картинке прилип текст
-                textEl.dataset.stuckTo = imageEl.className;
+                textEl.dataset.stuckTo = dropZone.dataset.for;
             }
         });
     });
@@ -108,14 +115,14 @@ document.addEventListener('mouseup', function() {
 document.getElementById('checkBtn').onclick = function() {
     // соответствие: item1Bottom -> item2Top, item2Bottom -> item3Top, item3Bottom -> item1Top
     const correctPairs = [
-        { text: document.querySelector('.item1Bottom'), imageClass: 'item1Top' },
-        { text: document.querySelector('.item2Bottom'), imageClass: 'item2Top' },
-        { text: document.querySelector('.item3Bottom'), imageClass: 'item3Top' }
+        { text: document.querySelector('.item1Bottom'), dropZoneData: 'item1Top' },
+        { text: document.querySelector('.item2Bottom'), dropZoneData: 'item2Top' },
+        { text: document.querySelector('.item3Bottom'), dropZoneData: 'item3Top' }
     ];
 
     let allCorrect = true;
     correctPairs.forEach(pair => {
-        if (pair.text.dataset.stuckTo !== pair.imageClass) {
+        if (pair.text.dataset.stuckTo !== pair.dropZoneData) {
             allCorrect = false;
         }
     });
