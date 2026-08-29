@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hy">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArmLetters</title>
+    <link rel="stylesheet" href="ArmLetters.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="top-bar">
+        <div class="title-block">
+          <p class="eyebrow">Ար Armenian letters</p>
+          <h1 class="letter-title" id="letterTitle">Ա ա</h1>
+        </div>
+      </header>
+
+      <section class="main-card">
+        <div class="letter-canvas" id="letterCanvas">
+          <div class="letters-container" id="lettersContainer">
+            <div class="letter-display" id="letterDisplay">Ա</div>
+            <div class="lower-letter" id="lowerLetter">ա</div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="nav-btn" id="prevBtn">⬅ Նախորդ</button>
+          <button class="nav-btn" id="nextBtn">Հաջորդ ➡</button>
+        </div>
+      </section>
+
+      <section class="word-row">
+        <article class="word-card" id="wordCardLeft">
+          <div class="emoji" id="emojiLeft">☀️</div>
+          <div class="word-boxes" id="boxesLeft"></div>
+        </article>
+
+        <article class="word-card" id="wordCardRight">
+          <div class="emoji" id="emojiRight">🌈</div>
+          <div class="word-boxes" id="boxesRight"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="ArmLetters.js"></script>
+  </body>
+</html>
