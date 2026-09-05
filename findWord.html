@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="hy">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>գլուխկոտրուկ - Գտիր բառը</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&family=Noto+Sans+Armenian:wght@500;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="findWord.css">
+</head>
+<body>
+	<main class="game-shell">
+		<header class="topbar">
+			<a class="brand" href="index.html" aria-label="Գլխավոր էջ"><span class="brand-mark">Գ</span><span>լուխկոտրուկ</span></a>
+			<div class="level-counter" aria-live="polite"><span class="level-label">Մակարդակ</span><strong><span id="levelNumber">1</span><span class="slash"> / </span>50</strong></div>
+		</header>
+		<section class="game-content" aria-labelledby="gameTitle">
+			<div class="intro-row">
+				<div><p class="eyebrow">Դասավորիր տառերը</p><h1 id="gameTitle">Գտիր բառը</h1><p class="instruction">Տեղադրիր տառերը ճիշտ հերթականությամբ։</p></div>
+				<div class="score" aria-label="Միավորներ"><span class="score-star">★</span><span id="scoreValue">0</span></div>
+			</div>
+			<div class="play-area">
+				<div class="sticker-card" aria-label="Կատուի սթիքեր"><div class="window-dots"><i></i><i></i><i></i></div><div class="cat-sticker" aria-hidden="true">😺</div></div>
+				<div class="answer-zone"><p class="zone-label">Քո բառը</p><div class="answer-slots" id="answerSlots" aria-label="Պատասխանի վանդակներ"></div></div>
+				<div class="letter-zone"><p class="zone-label">Ընտրիր տառերը</p><div class="letter-bank" id="letterBank" aria-label="Խառնված տառեր"></div></div>
+			</div>
+			<p class="message" id="message" aria-live="polite">Քաշիր տառերը դատարկ վանդակների մեջ։</p>
+			<nav class="actions" aria-label="Խաղի կառավարում"><a class="button button-secondary" href="index.html"><span aria-hidden="true">⌂</span> Գլխավոր էջ</a><button class="button button-ghost" id="backButton" type="button"><span aria-hidden="true">↶</span> Հետ</button><button class="button button-primary" id="nextButton" type="button">Հաջորդ <span aria-hidden="true">→</span></button></nav>
+		</section>
+	</main>
+	<script src="findWord.js"></script>
+</body>
+</html>
