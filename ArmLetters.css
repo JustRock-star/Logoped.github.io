@@ -178,7 +178,7 @@ body {
     padding: 18px;
   }
 
-  .home-btn {
+  #to-home {
     display: inline-block;
     position: fixed;
     bottom: 30px;
@@ -197,7 +197,7 @@ body {
     box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
 }
 
-.home-btn:hover {
+#to-home:hover {
     background: #FF5252;
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
